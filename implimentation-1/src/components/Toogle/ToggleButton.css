@@ -1,0 +1,35 @@
+.toggle-button {
+  width: 50%;
+  border: 4px solid rgb(180, 26, 15);
+  padding: 20px;
+  margin: 50px auto;
+}
+.text {
+  width: 100%;
+  border: 4px solid rgb(22, 1, 1);
+  font-style: italic;
+  font-size: 25px;
+}
+.toggle-button button {
+  width: 10%;
+  border-radius: 10px;
+}
+.toggle-button-on {
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.toggle-button-off {
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
