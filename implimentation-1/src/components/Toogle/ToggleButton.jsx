@@ -24,7 +24,7 @@ const ToggleButton = () => {
       >
         {isToggle ? "On" : "Off"}
       </button>{" "}
-      <span>← Please Click and Check. </span>
+      <span>⬅ Please Click and Check. </span>
     </div>
   );
 };
