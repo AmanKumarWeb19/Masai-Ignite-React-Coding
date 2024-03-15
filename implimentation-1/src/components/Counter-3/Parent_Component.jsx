@@ -14,16 +14,16 @@ const Parent_Component = () => {
     setCounter(counter - 1);
   };
 
-  const Reset=()=>{
-    setCounter(0)
-  }
+  const Reset = () => {
+    setCounter(0);
+  };
 
   return (
     <div>
       <h1>Counter:- {counter}</h1>
       <button onClick={Increament}>increment</button>
       <button onClick={Decreament}>decrement </button>
-      <Child_Component Reset={Reset}/>
+      <Child_Component Reset={Reset} />
     </div>
   );
 };
