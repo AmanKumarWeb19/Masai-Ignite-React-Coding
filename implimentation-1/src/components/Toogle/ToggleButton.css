@@ -1,4 +1,4 @@
-.toggle-button {
+/* .toggle-button {
   width: 50%;
   border: 4px solid rgb(180, 26, 15);
   padding: 20px;
@@ -32,4 +32,13 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+} */
+
+.toggle-on {
+  background-color: green;
+  color: white;
+}
+.toggle-off {
+  background-color: red;
+  color: white;
 }

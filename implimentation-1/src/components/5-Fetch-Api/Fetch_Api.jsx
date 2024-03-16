@@ -4,20 +4,19 @@ API Endpoint : https://jsonplaceholder.typicode.com/posts" */
 import React, { useEffect, useState } from "react";
 
 const Fetch_Api = () => {
-  const [post, setPost] = useState([]);
-  const [loading, setloading] = useState(true);
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const fetchData = async () => {
     try {
-      const fetchData = await fetch(
+      const fetchApi = await fetch(
         "https://jsonplaceholder.typicode.com/posts"
       );
-      const jsonData = await fetchData.json();
-      setPost(jsonData);
-      setloading(false);
+      const jsonData = await fetchApi.json();
+      setData(jsonData);
+      setLoading(false);
     } catch (err) {
-      console.log("Err", err);
-      setloading(false)
+      console.log(err);
     }
   };
 
@@ -25,14 +24,14 @@ const Fetch_Api = () => {
     fetchData();
   }, []);
   return (
-    <div style={{ border: "1px solid red", width: "50%", margin: "auto" }}>
+    <div>
       {loading ? (
-        <p>Loading......</p>
+        <p>Loading..........</p>
       ) : (
         <ol>
-          {post.map((post) => (
-            <li style={{ width: "100%" }} key={post.id}>
-              <h2 style={{ color: "red" }}>{post.title}</h2>
+          {data.map((post) => (
+            <li key={post.id}>
+              <h1>{post.title}</h1>
               <h3>{post.body}</h3>
             </li>
           ))}
@@ -44,3 +43,45 @@ const Fetch_Api = () => {
 
 export default Fetch_Api;
 
+// import React, { useEffect, useState } from "react";
+
+// const Fetch_Api = () => {
+//   const [post, setPost] = useState([]);
+//   const [loading, setloading] = useState(true);
+
+//   const fetchData = async () => {
+//     try {
+//       const fetchData = await fetch(
+//         "https://jsonplaceholder.typicode.com/posts"
+//       );
+//       const jsonData = await fetchData.json();
+//       setPost(jsonData);
+//       setloading(false);
+//     } catch (err) {
+//       console.log("Err", err);
+//       setloading(false)
+//     }
+//   };
+
+//   useEffect(() => {
+//     fetchData();
+//   }, []);
+//   return (
+//     <div style={{ border: "1px solid red", width: "50%", margin: "auto" }}>
+//       {loading ? (
+//         <p>Loading......</p>
+//       ) : (
+//         <ol>
+//           {post.map((post) => (
+//             <li style={{ width: "100%" }} key={post.id}>
+//               <h2 style={{ color: "red" }}>{post.title}</h2>
+//               <h3>{post.body}</h3>
+//             </li>
+//           ))}
+//         </ol>
+//       )}
+//     </div>
+//   );
+// };
+
+// export default Fetch_Api;
