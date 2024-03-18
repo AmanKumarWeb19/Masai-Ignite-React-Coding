@@ -5,17 +5,33 @@ import React, { useState } from "react";
 import Mesg_Child from "./Mesg_Child";
 
 const Mesg_Parent = () => {
-  const [message, setMessage] = useState("I am Aman");
+  const [msg, setMsg] = useState("I am aman");
 
   return (
     <div>
-    
-      <Mesg_Child message={message} setMessage={setMessage} />
+      <h1>{msg}</h1>
+      <Mesg_Child msg={msg} setMsg={setMsg} />
     </div>
   );
 };
 
 export default Mesg_Parent;
+
+// import React, { useState } from "react";
+// import Mesg_Child from "./Mesg_Child";
+
+// const Mesg_Parent = () => {
+//   const [message, setMessage] = useState("I am Aman");
+
+//   return (
+//     <div>
+
+//       <Mesg_Child message={message} setMessage={setMessage} />
+//     </div>
+//   );
+// };
+
+// export default Mesg_Parent;
 
 // import React, { useState } from "react";
 // import Mesg_Child from "./Mesg_Child";

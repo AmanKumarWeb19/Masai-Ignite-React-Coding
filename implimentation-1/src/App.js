@@ -16,7 +16,7 @@ function App() {
         {/* <ToggleButton /> */}
         {/* <Parent_Dark_light />  */}
         {/* <Parent_Component /> */}
-        {/* <Mesg_Parent /> */}
+        <Mesg_Parent />
         {/* <Fetch_Api /> */}
         {/* <SearchQueryApi /> */}
         {/* <Timer/> */}
