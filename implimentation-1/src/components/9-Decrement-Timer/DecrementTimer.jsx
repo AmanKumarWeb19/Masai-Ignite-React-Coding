@@ -3,34 +3,69 @@
 import React, { useEffect, useState } from "react";
 
 const DecrementTimer = () => {
-  const [sec, setSec] = useState(0);
+  const [decCounter, setDecCounter] = useState(0);
 
   useEffect(() => {
-    const secId = setInterval(() => {
-      if (sec > 0) {
-        setSec((prev) => prev - 1);
+    const TimerId = setInterval(() => {
+      if (decCounter > 0) {
+        setDecCounter((prev) => prev - 1);
       } else {
-        clearInterval(secId);
+        clearInterval(TimerId);
       }
     }, 1000);
     return () => {
-      clearInterval(secId);
+      clearInterval(TimerId);
     };
-  }, [sec]);
+  }, [decCounter]);
 
-  const handleChange = (e) => {
-    setSec(Number(e.target.value));
+  const handleCount = (e) => {
+    setDecCounter(e.target.value);
   };
-
   return (
     <div>
-      <input type="text" value={sec} onChange={handleChange} />
-      <h2>{sec > 0 ? sec : "Timer Ended!"}</h2>
+      <h2>{decCounter > 0 ? decCounter : "Timer Ended!"}</h2>
+      <input
+        type="text"
+        placeholder="enter Number Here"
+        onChange={handleCount}
+      />
     </div>
   );
 };
 
 export default DecrementTimer;
+
+// import React, { useEffect, useState } from "react";
+
+// const DecrementTimer = () => {
+//   const [sec, setSec] = useState(0);
+
+//   useEffect(() => {
+//     const secId = setInterval(() => {
+//       if (sec > 0) {
+//         setSec((prev) => prev - 1);
+//       } else {
+//         clearInterval(secId);
+//       }
+//     }, 1000);
+//     return () => {
+//       clearInterval(secId);
+//     };
+//   }, [sec]);
+
+//   const handleChange = (e) => {
+//     setSec(Number(e.target.value));
+//   };
+
+//   return (
+//     <div>
+//       <input type="text" value={sec} onChange={handleChange} />
+//       <h2>{sec > 0 ? sec : "Timer Ended!"}</h2>
+//     </div>
+//   );
+// };
+
+// export default DecrementTimer;
 
 // import React, { useEffect, useState } from "react";
 

@@ -20,8 +20,8 @@ function App() {
         {/* <Fetch_Api /> */}
         {/* <SearchQueryApi /> */}
         {/* <Timer/> */}
-        <PeriodicallyUpdateTimer/>
-        {/* <DecrementTimer /> */}
+        {/* <PeriodicallyUpdateTimer/> */}
+        <DecrementTimer />
         {/* <TextAreaCount /> */}
       </div>
     </div>
