@@ -1,4 +1,5 @@
 import TextAreaCount from "./components/10-character-Count/TextAreaCount";
+import Axios_Parent from "./components/11-Axios/Axios_Parent";
 import Mesg_Parent from "./components/4-Message/Mesg_Parent";
 import Fetch_Api from "./components/5-Fetch-Api/Fetch_Api";
 import SearchQueryApi from "./components/6-SearchQuery/SearchQueryApi";
@@ -21,8 +22,9 @@ function App() {
         {/* <SearchQueryApi /> */}
         {/* <Timer/> */}
         {/* <PeriodicallyUpdateTimer/> */}
-        <DecrementTimer />
+        {/* <DecrementTimer /> */}
         {/* <TextAreaCount /> */}
+        {/* <Axios_Parent /> */}
       </div>
     </div>
   );
