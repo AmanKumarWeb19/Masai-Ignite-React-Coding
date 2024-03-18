@@ -22,7 +22,7 @@ function App() {
         {/* <Timer/> */}
         {/* <PeriodicallyUpdateTimer/> */}
         {/* <DecrementTimer /> */}
-        <TextAreaCount />
+        {/* <TextAreaCount /> */}
       </div>
     </div>
   );

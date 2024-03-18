@@ -6,12 +6,12 @@ import Child_Component from "./Child_Component";
 const Parent_Component = () => {
   const [counter, setCounter] = useState(0);
 
-  const handleIncreament = () => {
-    setCounter((prevCounter) => prevCounter + 1);
+  const handleIncrement = () => {
+    setCounter((prev) => prev + 1);
   };
 
-  const handleDecreament = () => {
-    setCounter((prevCounter) => prevCounter - 1);
+  const handleDecrement = () => {
+    setCounter((prev) => prev - 1);
   };
 
   const Reset = () => {
@@ -20,15 +20,45 @@ const Parent_Component = () => {
 
   return (
     <div>
-      <h1>Counter:- {counter}</h1>
-      <button onClick={handleIncreament}>Increament</button>
-      <button onClick={handleDecreament}>Decreament</button>
+      <h2>{counter}</h2>
+      <button onClick={handleIncrement}>Increment</button>
+      <button onClick={handleDecrement}>Decrement</button>
       <Child_Component Reset={Reset} />
     </div>
   );
 };
 
 export default Parent_Component;
+
+// import React, { useState } from "react";
+// import Child_Component from "./Child_Component";
+
+// const Parent_Component = () => {
+//   const [counter, setCounter] = useState(0);
+
+//   const handleIncreament = () => {
+//     setCounter((prevCounter) => prevCounter + 1);
+//   };
+
+//   const handleDecreament = () => {
+//     setCounter((prevCounter) => prevCounter - 1);
+//   };
+
+//   const Reset = () => {
+//     setCounter(0);
+//   };
+
+//   return (
+//     <div>
+//       <h1>Counter:- {counter}</h1>
+//       <button onClick={handleIncreament}>Increament</button>
+//       <button onClick={handleDecreament}>Decreament</button>
+//       <Child_Component Reset={Reset} />
+//     </div>
+//   );
+// };
+
+// export default Parent_Component;
 
 // import React, { useState } from "react";
 // import Child_Component from "./Child_Component";
