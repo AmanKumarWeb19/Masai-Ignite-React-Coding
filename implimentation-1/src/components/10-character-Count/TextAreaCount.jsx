@@ -3,6 +3,30 @@
 Expected Output:
 When the user types in the textarea, the character counter should display the number of characters entered." */
 
+import React, { useRef, useState } from "react";
+
+const TextAreaCount = () => {
+  const textRef = useRef(null);
+  const [timer, setTimer] = useState(0);
+  const handleCount = () => {
+    const update = textRef.current.value;
+    setTimer(update);
+  };
+  return (
+    <div>
+      <h2>TextAreaCount:- {timer.length}</h2>
+      <textarea
+        ref={textRef}
+        onChange={handleCount}
+        cols="30"
+        rows="10"
+      ></textarea>
+    </div>
+  );
+};
+
+export default TextAreaCount;
+
 // import React, { useState } from "react";
 
 // const TextAreaCount = () => {
@@ -23,30 +47,30 @@ When the user types in the textarea, the character counter should display the nu
 
 // export default TextAreaCount;
 
-import React, { useRef, useState } from "react";
+// import React, { useRef, useState } from "react";
 
-const TextAreaCount = () => {
-  const textRef = useRef(null);
-  const [count, setCount] = useState(0);
+// const TextAreaCount = () => {
+//   const textRef = useRef(null);
+//   const [count, setCount] = useState(0);
 
-  const handleCount = () => {
-    let updatedText = textRef.current.value;
-    setCount(updatedText);
-  };
-  return (
-    <div>
-      <textarea
-        ref={textRef}
-        onChange={handleCount}
-        cols="30"
-        rows="10"
-      ></textarea>
-      <h2>check Count Alphabet Number :-- {count.length}</h2>
-    </div>
-  );
-};
+//   const handleCount = () => {
+//     let updatedText = textRef.current.value;
+//     setCount(updatedText);
+//   };
+//   return (
+//     <div>
+//       <textarea
+//         ref={textRef}
+//         onChange={handleCount}
+//         cols="30"
+//         rows="10"
+//       ></textarea>
+//       <h2>check Count Alphabet Number :-- {count.length}</h2>
+//     </div>
+//   );
+// };
 
-export default TextAreaCount;
+// export default TextAreaCount;
 
 // import React, { useState } from "react";
 

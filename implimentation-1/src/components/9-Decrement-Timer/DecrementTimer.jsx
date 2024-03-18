@@ -19,7 +19,7 @@ const DecrementTimer = () => {
   }, [decCounter]);
 
   const handleCount = (e) => {
-    setDecCounter(e.target.value);
+    setDecCounter(Number(e.target.value));
   };
   return (
     <div>
