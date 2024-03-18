@@ -18,9 +18,9 @@ function App() {
         {/* <Parent_Component /> */}
         {/* <Mesg_Parent /> */}
         {/* <Fetch_Api /> */}
-        <SearchQueryApi />
+        {/* <SearchQueryApi /> */}
         {/* <Timer/> */}
-        {/* <PeriodicallyUpdateTimer/> */}
+        <PeriodicallyUpdateTimer/>
         {/* <DecrementTimer /> */}
         {/* <TextAreaCount /> */}
       </div>

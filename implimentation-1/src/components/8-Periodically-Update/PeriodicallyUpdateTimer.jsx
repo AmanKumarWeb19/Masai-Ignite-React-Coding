@@ -6,22 +6,45 @@ const PeriodicallyUpdateTimer = () => {
   const [timer, setTimer] = useState(new Date());
 
   useEffect(() => {
-    let TimerId = setInterval(() => {
+    const TimerId = setInterval(() => {
       setTimer(new Date());
     }, 1000);
     return () => {
       clearInterval(TimerId);
     };
-  }, []);
+  });
 
   return (
     <div>
-      <h2>Time:- {timer.toLocaleTimeString()}</h2>
+      <h2>Time:-{timer.toLocaleTimeString()}</h2>
     </div>
   );
 };
 
 export default PeriodicallyUpdateTimer;
+
+// import React, { useEffect, useState } from "react";
+
+// const PeriodicallyUpdateTimer = () => {
+//   const [timer, setTimer] = useState(new Date());
+
+//   useEffect(() => {
+//     let TimerId = setInterval(() => {
+//       setTimer(new Date());
+//     }, 1000);
+//     return () => {
+//       clearInterval(TimerId);
+//     };
+//   }, []);
+
+//   return (
+//     <div>
+//       <h2>Time:- {timer.toLocaleTimeString()}</h2>
+//     </div>
+//   );
+// };
+
+// export default PeriodicallyUpdateTimer;
 
 // import React, { useEffect, useState } from "react";
 

@@ -7,26 +7,51 @@ const Timer = () => {
 
   useEffect(() => {
     let TimerId = setInterval(() => {
-      setTimer((prevTime) => prevTime + 1);
+      setTimer((prev) => prev + 1);
     }, 1000);
     return () => {
       clearInterval(TimerId);
     };
-  });
-
+  }, []);
   const Reset = () => {
     setTimer(0);
   };
-
   return (
     <div>
-      <h2>{timer}</h2>
-      <button onClick={Reset}>Reset</button>
+      <h1>Timer:- {timer}</h1> <button onClick={Reset}>Reset</button>
     </div>
   );
 };
 
 export default Timer;
+
+// import React, { useEffect, useState } from "react";
+
+// const Timer = () => {
+//   const [timer, setTimer] = useState(0);
+
+//   useEffect(() => {
+//     let TimerId = setInterval(() => {
+//       setTimer((prevTime) => prevTime + 1);
+//     }, 1000);
+//     return () => {
+//       clearInterval(TimerId);
+//     };
+//   });
+
+//   const Reset = () => {
+//     setTimer(0);
+//   };
+
+//   return (
+//     <div>
+//       <h2>{timer}</h2>
+//       <button onClick={Reset}>Reset</button>
+//     </div>
+//   );
+// };
+
+// export default Timer;
 
 // import React, { useEffect, useState } from "react";
 
