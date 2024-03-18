@@ -4,7 +4,7 @@ API Endpoint : https://jsonplaceholder.typicode.com/posts" */
 import React, { useEffect, useState } from "react";
 
 const Fetch_Api = () => {
-  const [data, setData] = useState([]);
+  const [post, setPost] = useState([]);
   const [loading, setLoading] = useState(true);
 
   const fetchData = async () => {
@@ -13,7 +13,7 @@ const Fetch_Api = () => {
         "https://jsonplaceholder.typicode.com/posts"
       );
       const jsonData = await fetchApi.json();
-      setData(jsonData);
+      setPost(jsonData);
       setLoading(false);
     } catch (err) {
       console.log(err);
@@ -26,12 +26,12 @@ const Fetch_Api = () => {
   return (
     <div>
       {loading ? (
-        <p>Loading..........</p>
+        <h1>Loading.........</h1>
       ) : (
         <ol>
-          {data.map((post) => (
+          {post.map((post) => (
             <li key={post.id}>
-              <h1>{post.title}</h1>
+              <h2>{post.title}</h2>
               <h3>{post.body}</h3>
             </li>
           ))}
@@ -42,6 +42,48 @@ const Fetch_Api = () => {
 };
 
 export default Fetch_Api;
+
+// import React, { useEffect, useState } from "react";
+
+// const Fetch_Api = () => {
+//   const [data, setData] = useState([]);
+//   const [loading, setLoading] = useState(true);
+
+//   const fetchData = async () => {
+//     try {
+//       const fetchApi = await fetch(
+//         "https://jsonplaceholder.typicode.com/posts"
+//       );
+//       const jsonData = await fetchApi.json();
+//       setData(jsonData);
+//       setLoading(false);
+//     } catch (err) {
+//       console.log(err);
+//     }
+//   };
+
+//   useEffect(() => {
+//     fetchData();
+//   }, []);
+//   return (
+//     <div>
+//       {loading ? (
+//         <p>Loading..........</p>
+//       ) : (
+//         <ol>
+//           {data.map((post) => (
+//             <li key={post.id}>
+//               <h1>{post.title}</h1>
+//               <h3>{post.body}</h3>
+//             </li>
+//           ))}
+//         </ol>
+//       )}
+//     </div>
+//   );
+// };
+
+// export default Fetch_Api;
 
 // import React, { useEffect, useState } from "react";
 

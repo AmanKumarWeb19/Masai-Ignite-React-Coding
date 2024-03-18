@@ -6,17 +6,21 @@ https://jsonplaceholder.typicode.com/users?q=Ervin" */
 import React, { useEffect, useState } from "react";
 
 const SearchQueryApi = () => {
-  const [data, setData] = useState([]);
+  const [user, setUser] = useState([]);
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");
 
   const fetchData = async (query) => {
-    const fetchApi = await fetch(
-      `https://jsonplaceholder.typicode.com/users?q=${query}`
-    );
-    const jsonData = await fetchApi.json();
-    setData(jsonData);
-    setLoading(false);
+    try {
+      const fetchApi = await fetch(
+        `https://jsonplaceholder.typicode.com/users?q=${query}`
+      );
+      const jsonData = await fetchApi.json();
+      setUser(jsonData);
+      setLoading(false);
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   useEffect(() => {
@@ -26,22 +30,22 @@ const SearchQueryApi = () => {
   const handleSearch = (e) => {
     setSearchQuery(e.target.value);
   };
+
   return (
     <div>
       <input
         type="text"
-        placeholder="Search Name"
         value={searchQuery}
+        placeholder="Search Text"
         onChange={handleSearch}
       />
-
       {loading ? (
-        <p>Loading......</p>
+        <h2>Loading...</h2>
       ) : (
         <ol>
-          {data.map((user) => (
+          {user.map((user) => (
             <li key={user.id}>
-              <h1>{user.name}</h1>
+              <h2>{user.name}</h2>
             </li>
           ))}
         </ol>
@@ -51,6 +55,55 @@ const SearchQueryApi = () => {
 };
 
 export default SearchQueryApi;
+
+// import React, { useEffect, useState } from "react";
+
+// const SearchQueryApi = () => {
+//   const [data, setData] = useState([]);
+//   const [loading, setLoading] = useState(true);
+//   const [searchQuery, setSearchQuery] = useState("");
+
+//   const fetchData = async (query) => {
+//     const fetchApi = await fetch(
+//       `https://jsonplaceholder.typicode.com/users?q=${query}`
+//     );
+//     const jsonData = await fetchApi.json();
+//     setData(jsonData);
+//     setLoading(false);
+//   };
+
+//   useEffect(() => {
+//     fetchData(searchQuery);
+//   }, [searchQuery]);
+
+//   const handleSearch = (e) => {
+//     setSearchQuery(e.target.value);
+//   };
+//   return (
+//     <div>
+//       <input
+//         type="text"
+//         placeholder="Search Name"
+//         value={searchQuery}
+//         onChange={handleSearch}
+//       />
+
+//       {loading ? (
+//         <p>Loading......</p>
+//       ) : (
+//         <ol>
+//           {data.map((user) => (
+//             <li key={user.id}>
+//               <h1>{user.name}</h1>
+//             </li>
+//           ))}
+//         </ol>
+//       )}
+//     </div>
+//   );
+// };
+
+// export default SearchQueryApi;
 
 // import React, { useEffect, useState } from "react";
 
