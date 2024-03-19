@@ -17,6 +17,8 @@ import Routes404 from "./components/15-Display-Route/Routes404";
 import Reciepe from "./components/16-Reciepe/Reciepe";
 import Trivia_Question from "./components/17-Trivia/Trivia_Question";
 import Login from "./components/21-Login/Login";
+import Todo from "./components/22-Todo/Todo";
+import Check_Uncheck from "./components/20-CheckList/Check_Uncheck";
 
 function App() {
   return (
@@ -39,7 +41,9 @@ function App() {
         {/* <Routes404 /> */}
         {/* <Reciepe /> */}
         {/* <Trivia_Question /> */}
-        <Login />
+        {/* <Login /> */}
+        {/* <Todo /> */}
+        <Check_Uncheck/>
       </div>
     </div>
   );
