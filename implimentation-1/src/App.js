@@ -19,6 +19,7 @@ import Trivia_Question from "./components/17-Trivia/Trivia_Question";
 import Login from "./components/21-Login/Login";
 import Todo from "./components/22-Todo/Todo";
 import Check_Uncheck from "./components/20-CheckList/Check_Uncheck";
+import Pagination from "./components/Pagination/Pagination";
 
 function App() {
   return (
@@ -43,7 +44,8 @@ function App() {
         {/* <Trivia_Question /> */}
         {/* <Login /> */}
         {/* <Todo /> */}
-        <Check_Uncheck/>
+        {/* <Check_Uncheck/> */}
+        <Pagination/>
       </div>
     </div>
   );
