@@ -1,15 +1,14 @@
 import React from "react";
 
-const DataCard = ({ name, username, email, address, phone }) => {
+const DataCard = ({ id, name, username, email }) => {
   return (
     <>
-      <h1>Name:- {name}</h1>
-      <h3>UserName:- {username}</h3>
-      <h4>Phone:- {phone}</h4>
-      <p>Email:- {email}</p>
-      <p>
-        Address:- {address.street}, {address.suite}, {address.city}
-      </p>
+      <div>
+        <h1>ID:- {id}</h1>
+        <h1>Name:- {name}</h1>
+        <h2>UserName:- {username}</h2>
+        <h2>Email:- {email}</h2>
+      </div>
     </>
   );
 };
