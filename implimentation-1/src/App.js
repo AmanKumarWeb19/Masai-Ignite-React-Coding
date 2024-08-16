@@ -20,11 +20,14 @@ import Login from "./components/21-Login/Login";
 import Todo from "./components/22-Todo/Todo";
 import Check_Uncheck from "./components/20-CheckList/Check_Uncheck";
 import Pagination from "./components/Pagination/Pagination";
+import ParentComponent from "./components/1-prop-Drilling/ParentComponent";
+import GrandParent from "./components/1-prop-Drilling/GrandParent";
 
 function App() {
   return (
     <div className="App">
       <div>
+        <GrandParent />
         {/* <ToggleButton /> */}
         {/* <Parent_Dark_light />  */}
         {/* <Parent_Component /> */}
@@ -45,7 +48,7 @@ function App() {
         {/* <Login /> */}
         {/* <Todo /> */}
         {/* <Check_Uncheck/> */}
-        <Pagination/>
+        {/* <Pagination/> */}
       </div>
     </div>
   );
